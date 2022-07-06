@@ -1,0 +1,451 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Tower FL / kulyusuf#1921", "Ocean")
+
+local Player = Window:NewTab("Player")
+local Halos = Window:NewTab("Halos")
+local Tags = Window:NewTab("Tags")
+local Effects = Window:NewTab("Effects")
+
+local Money = Effects:NewSection("All Effects Free")
+local info = Player:NewSection("Speed/Jump")
+local haloss = Halos:NewSection("All Halos")
+local tagss = Tags:NewSection("All Tags")
+
+info:NewSlider("WalkSpeed", "Your WalkSpeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+info:NewSlider("JumpPower", "Your JumpPower", 500, 0, function(j) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = j
+end)
+
+info:NewButton("Finish", "Tp to Finish", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.tower.sections.finish.FinishGlow.CFrame
+end)
+
+haloss:NewButton("Blue Halo", "", function()
+    local args = {
+    [1] = "BlueHalo"
+}
+
+game:GetService("ReplicatedStorage").haloAction:FireServer(unpack(args))
+end)
+haloss:NewButton("Orange Halo", "", function()
+    local args = {
+    [1] = "OrangeHalo"
+}
+
+game:GetService("ReplicatedStorage").haloAction:FireServer(unpack(args))
+end)
+haloss:NewButton("Glass Halo", "", function()
+    local args = {
+    [1] = "GlassHalo"
+}
+
+game:GetService("ReplicatedStorage").haloAction:FireServer(unpack(args))
+end)
+haloss:NewButton("Furry Halo", "", function()
+    local args = {
+    [1] = "FurryHalo"
+}
+
+game:GetService("ReplicatedStorage").haloAction:FireServer(unpack(args))
+end)
+haloss:NewButton("Gold Halo", "", function()
+    local args = {
+    [1] = "GoldHalo"
+}
+
+game:GetService("ReplicatedStorage").haloAction:FireServer(unpack(args))
+end)
+haloss:NewButton("Pink Halo", "", function()
+    local args = {
+    [1] = "PinkHalo"
+}
+
+game:GetService("ReplicatedStorage").haloAction:FireServer(unpack(args))
+end)
+haloss:NewButton("Purple Halo", "", function()
+    local args = {
+    [1] = "PurpleHalo"
+}
+
+game:GetService("ReplicatedStorage").haloAction:FireServer(unpack(args))
+end)
+haloss:NewButton("Red Halo", "", function()
+    local args = {
+    [1] = "RedHalo"
+}
+
+game:GetService("ReplicatedStorage").haloAction:FireServer(unpack(args))
+end)
+haloss:NewButton("Silver Halo", "", function()
+    local args = {
+    [1] = "SilverHalo"
+}
+
+game:GetService("ReplicatedStorage").haloAction:FireServer(unpack(args))
+end)
+haloss:NewButton("Teal Halo", "", function()
+    local args = {
+    [1] = "TealHalo"
+}
+
+game:GetService("ReplicatedStorage").haloAction:FireServer(unpack(args))
+end)
+haloss:NewButton("White Halo", "", function()
+    local args = {
+    [1] = "WhiteHalo"
+}
+
+game:GetService("ReplicatedStorage").haloAction:FireServer(unpack(args))
+end)
+
+tagss:NewButton("Admin Tag", "", function()
+    local args = {
+    [1] = "admin"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("AdminBuilder Tag", "", function()
+    local args = {
+    [1] = "adminbuilder"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Alberg Tag", "", function()
+    local args = {
+    [1] = "alberg"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Builder Tag", "", function()
+    local args = {
+    [1] = "builder"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Cat Tag", "", function()
+    local args = {
+    [1] = "cat"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Cool Tag", "", function()
+    local args = {
+    [1] = "cool"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Creator Tag", "", function()
+    local args = {
+    [1] = "creator"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Custom Tag", "", function()
+    local args = {
+    [1] = "custom"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Dinnerbone Tag", "", function()
+    local args = {
+    [1] = "dinnerbone"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Fathul Tag", "", function()
+    local args = {
+    [1] = "fathul"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Flushed Tag", "", function()
+    local args = {
+    [1] = "flushed"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Furry Tag", "", function()
+    local args = {
+    [1] = "furry"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Member Tag", "", function()
+    local args = {
+    [1] = "member"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Mod Tag", "", function()
+    local args = {
+    [1] = "mod"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Noob Tag", "", function()
+    local args = {
+    [1] = "noob"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Pinkleaf Tag", "", function()
+    local args = {
+    [1] = "pinkleaf"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("Pro Tag", "", function()
+    local args = {
+    [1] = "pro"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+tagss:NewButton("UwU Tag", "", function()
+    local args = {
+    [1] = "uwu"
+}
+
+game:GetService("ReplicatedStorage").titleAction:FireServer(unpack(args))
+end)
+
+Money:NewButton("All Effects", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "High Speed",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["Name"] = "Invincibility",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["Name"] = "Low Gravity",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["Name"] = "Foggy",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["Name"] = "Negative",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["Name"] = "Lengthen",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["Name"] = "Extra Time",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["Name"] = "Night",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["Name"] = "Invisibility",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["Name"] = "Double Jump",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["Name"] = "Bunny Hop",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["Name"] = "Double Coins",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+
+
+Money:NewButton("High Speed Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "High Speed",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+Money:NewButton("Invincibility Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Invincibility",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+Money:NewButton("Low Gravity Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Low Gravity",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+Money:NewButton("Foggy Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Foggy",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+Money:NewButton("Negative Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Negative",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+Money:NewButton("Lengthen Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Lengthen",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+Money:NewButton("Extra Time Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Extra Time",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+Money:NewButton("Night Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Night",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+Money:NewButton("Invisibility Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Invisibility",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+Money:NewButton("Double Jump Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Double Jump",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+Money:NewButton("Bunny Hop Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Bunny Hop",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+Money:NewButton("Double Coins Effect", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Double Coins",
+        ["Price"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+
