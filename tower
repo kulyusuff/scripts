@@ -6,11 +6,18 @@ local Player = Window:NewTab("Player")
 local Halos = Window:NewTab("Halos")
 local Tags = Window:NewTab("Tags")
 local Effects = Window:NewTab("Effects")
+local coins = Window:NewTab("Coin")
+local gears = Window:NewTab("Gears")
+local script = Window:NewTab("ScriptHub")
 
 local Money = Effects:NewSection("All Effects Free")
 local info = Player:NewSection("Speed/Jump")
 local haloss = Halos:NewSection("All Halos")
 local tagss = Tags:NewSection("All Tags")
+local coin = coins:NewSection("If the FIX COINS button doesn't work, click it twice.")
+local coin2 = coins:NewSection("May not work sometimes.")
+local notfree = gears:NewSection("Gears Not Free")
+local script1 = script:NewSection("Scripts")
 
 info:NewSlider("WalkSpeed", "Your WalkSpeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
@@ -21,6 +28,12 @@ end)
 
 info:NewButton("Finish", "Tp to Finish", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.tower.sections.finish.FinishGlow.CFrame
+end)
+
+info:NewButton("Rejoin", "", function()
+    local ts = game:GetService("TeleportService")
+	local p = game:GetService("Players").LocalPlayer
+	ts:Teleport(game.PlaceId, p)
 end)
 
 haloss:NewButton("Blue Halo", "", function()
@@ -449,3 +462,47 @@ Money:NewButton("Double Coins Effect", "", function()
 game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
 end)
 
+coin:NewButton("INF COINS", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Extra Time",
+        ["Price"] = -999999999999999999
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+
+coin:NewButton("FIX COINS", "", function()
+    local args = {
+    [1] = {
+        ["Name"] = "Invisibility",
+        ["Price"] = -9223372036854776000
+    }
+}
+
+game:GetService("ReplicatedStorage").mutatorEvent:FireServer(unpack(args))
+end)
+
+notfree:NewButton("Speed Coil", "", function()
+	game:GetService("ReplicatedStorage").toolEvents.speed:FireServer()
+end)
+notfree:NewButton("Gravity Coil", "", function()
+	game:GetService("ReplicatedStorage").toolEvents.gravity:FireServer()
+end)
+notfree:NewButton("Fusion Coil", "", function()
+	game:GetService("ReplicatedStorage").toolEvents.fusion:FireServer()
+end)
+notfree:NewButton("Trowel", "", function()
+	game:GetService("ReplicatedStorage").toolEvents.trowel:FireServer()
+end)
+notfree:NewButton("Hook", "", function()
+	game:GetService("ReplicatedStorage").toolEvents.hook:FireServer()
+end)
+notfree:NewButton("Hourglass", "", function()
+	game:GetService("ReplicatedStorage").toolEvents.hourglass:FireServer()
+end)
+
+script1:NewButton("Infinite Yield", "", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
