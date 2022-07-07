@@ -503,6 +503,14 @@ notfree:NewButton("Hourglass", "", function()
 	game:GetService("ReplicatedStorage").toolEvents.hourglass:FireServer()
 end)
 
+notfree:NewButton("Equip All", "", function()
+	for _, tool in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+         tool.Parent = game:GetService("Players").LocalPlayer.Character
+    end
+end
+end)
+
 script1:NewButton("Infinite Yield", "", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)
